@@ -1,7 +1,5 @@
 from section_maker import *
 
-input_section = ""
-
 input_section = input("Which section would you like to shuffle (A, B, or C)? ")
 if input_section == "A":
     sectiona.shuffle()
