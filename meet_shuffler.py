@@ -66,4 +66,19 @@ class Section():
 
         #recursive step
         self.shuffle()
-    
+#testing
+#sample students
+test_st_0 = Student("0","I","M")
+test_st_1 = Student("1","P","M")
+test_st_2 = Student("2","I","F")
+test_st_3 = Student("3","P","F")
+
+test_section = Section("test_section")
+test_section.add_student(test_st_0)
+test_section.add_student(test_st_1)
+test_section.add_student(test_st_2)
+test_section.add_student(test_st_3)
+
+#shuffle
+test_section.shuffle()
+print(test_section)
