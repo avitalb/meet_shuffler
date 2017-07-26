@@ -47,19 +47,20 @@ class Section():
 
 
     def shuffle(self):
+        student_list = list(self.students.keys())
         #base cases
         if len(self.students) == 0:
             return
          #also checks for uneven numbers
         elif len(self.students) == 1:
-            self.pairs.append((self.students[0],None))
-
+            self.pairs.append((self.students[student_list[0]],None))
+            return
         #find 2 different students
-        i0 = random.choice(list(self.students.keys()))
-        i1 = random.choice(list(self.students.keys()))
+        i0 = random.choice(student_list)
+        i1 = random.choice(student_list)
         while i0 == i1:
-            i0 = random.choice(list(self.students.keys()))
-            i1 = random.choice(list(self.students.keys()))
+            i0 = random.choice(student_list)
+            i1 = random.choice(student_list)
 
         student0 = self.students[i0]
         student1 = self.students[i1]  
